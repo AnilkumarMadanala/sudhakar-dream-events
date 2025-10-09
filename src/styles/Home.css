@@ -1,0 +1,94 @@
+/* Reset spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #1e1515;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ✅ Remove any top margin gap */
+#root, .home-page {
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Fullscreen carousel, no padding or gap */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen height */
+  overflow: hidden;
+}
+
+.carousel-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Overlay Text Centered */
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 25px 40px;
+  border-radius: 10px;
+}
+
+.carousel-overlay h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.carousel-overlay p {
+  font-size: 1.2rem;
+}
+
+/* ✅ About section styling */
+.welcome-section {
+  max-width: 900px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 70vh;
+  }
+
+  .carousel-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-overlay p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,78 @@
+.expertise-section {
+  background: linear-gradient(180deg, #fffaf5 0%, #fff 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.expertise-title {
+  font-size: 2.5rem;
+  color: #ff5722;
+  margin-bottom: 10px;
+}
+
+.expertise-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expertise-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.expertise-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.expertise-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  filter: brightness(80%);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.expertise-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(60%);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  text-align: left;
+}
+
+.overlay h3 {
+  font-size: 1.2rem;
+  color: #ffcc66;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .overlay {
+    text-align: center;
+  }
+}
